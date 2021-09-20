@@ -19,3 +19,6 @@ set __fish_git_prompt_char_untrackedfiles '☡'
 set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
+
+# alias
+alias g='cd (ghq root)/(ghq list | peco)'
