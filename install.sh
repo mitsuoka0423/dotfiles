@@ -12,6 +12,7 @@ git submodule update
 echo "start setup..."
 for f in .??*; do
     [ "$f" = ".git" ] && continue
+    [ "$f" = "configs" ] && continue
     ln -snfv ${THIS_DIR}/"$f" ~
 done
 
