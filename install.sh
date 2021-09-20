@@ -12,14 +12,14 @@ git submodule update
 echo "start setup..."
 for f in .??*; do
     [ "$f" = ".git" ] && continue
-    ln -snfv ~/dotfiles/"$f" ~/
+    ln -snfv ${THIS_DIR}/"$f" ~
 done
 
 echo "fish系"
-ln -sf ~/dotfiles/fish ~/.config/fish
+ln -sf ./dotfiles/fish ~/.config/fish
 
 echo "fishパッケージマネージャーfisherで管理されているもの"
-ln -sf ~/dotfiles/fisher ~/.config/fisher
+ln -sf ./dotfiles/fisher ~/.config/fisher
 
 cat << END
 
