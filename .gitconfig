@@ -1,14 +1,14 @@
 [user]
-	name = Marina Nakagawa
-	email = mari10172001@yahoo.co.jp
+	name = Takahiro Mitsuoka
+	email = mono0423@gmail.com
 [core]
 	quotepath = false
 	autocrlf = false
 	safecrlf = true
 	ignorecase = false
-	excludesfile = /Users/marina/.gitignore_global
+	excludesfile = /Users/mitsu/.gitignore_global
 [http]
-        postBuffer = 200M
+	postBuffer = 200M
 [credential]
 	helper = wincred
 [push]
