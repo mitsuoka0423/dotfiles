@@ -17,10 +17,10 @@ for f in .??*; do
 done
 
 echo "fish系"
-ln -sf ./dotfiles/fish ~/.config/fish
+ln -sf ${THIS_DIR}/fish ~/.config/fish
 
 echo "fishパッケージマネージャーfisherで管理されているもの"
-ln -sf ./dotfiles/fisher ~/.config/fisher
+ln -sf ${THIS_DIR}/fisher ~/.config/fisher
 
 cat << END
 
