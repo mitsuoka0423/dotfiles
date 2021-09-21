@@ -22,6 +22,10 @@ ln -sf ${THIS_DIR}/fish ~/.config/fish
 echo "fishパッケージマネージャーfisherで管理されているもの"
 ln -sf ${THIS_DIR}/fisher ~/.config/fisher
 
+echo "スクリーンショット保存場所を変更"
+mkdir ~/Pictures/Screenshots
+defaults write com.apple.screencapture location ~/Pictures/Screenshots/;killall SystemUIServer
+
 cat << END
 
 **************************************************
