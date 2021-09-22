@@ -22,3 +22,10 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 # alias
 alias g='cd (ghq root)/(ghq list | peco)'
+
+# functions
+function ghcr
+  gh repo create $argv
+  ghq get $argv[1]
+  code (ghq list --full-path -e $argv[1])
+end
