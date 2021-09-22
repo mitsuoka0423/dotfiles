@@ -12,7 +12,6 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 echo "Command Line Tools for Xcodeのインストールをします"
 xcode-select --install
 
-
 ### homebrew
 echo "homebrewをインストールしています"
 which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
