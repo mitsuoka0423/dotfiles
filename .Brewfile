@@ -5,6 +5,7 @@ tap "homebrew/core"
 brew "mas"
 brew "git"
 brew "git-lfs"
+brew "gh"
 brew "tig"
 brew "fish"
 brew "fzf"
@@ -17,6 +18,7 @@ brew "yarn"
 brew "heroku/brew/heroku"
 brew "postgresql"
 brew "nkf"
+brew "wget"
 
 cask "adobe-creative-cloud"
 cask "authy"
@@ -29,7 +31,6 @@ cask "google-chrome"
 cask "google-japanese-ime"
 cask "visual-studio-code"
 
-mas 'Alfred', id: 405843582
 mas "BetterSnapTool", id: 417375580
 mas 'Display Menu', id: 549083868
 mas 'Flip Clock - フルスクリーンの目覚まし時計', id: 1181028777
