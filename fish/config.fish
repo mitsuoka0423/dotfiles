@@ -22,6 +22,7 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 # alias
 alias g='cd (ghq root)/(ghq list | peco)'
+alias gg='ghq get'
 
 # functions
 function ghcr
@@ -29,3 +30,6 @@ function ghcr
   ghq get $argv[1]
   code (ghq list --full-path -e $argv[1])
 end
+
+# others
+eval (ssh-agent -c)
