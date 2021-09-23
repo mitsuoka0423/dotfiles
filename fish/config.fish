@@ -27,7 +27,7 @@ alias gg='ghq get'
 # functions
 function ghcr
   gh repo create $argv
-  ghq get $argv[1]
+  ghq get git@github.com:tmitsuoka0423/$argv[1]
   code (ghq list --full-path -e $argv[1])
 end
 
