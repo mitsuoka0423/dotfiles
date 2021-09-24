@@ -30,6 +30,7 @@ cask "docker"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "visual-studio-code"
+cask "vnc-viewer"
 
 mas "BetterSnapTool", id: 417375580
 mas 'Display Menu', id: 549083868
