@@ -7,6 +7,7 @@ brew "git"
 brew "git-lfs"
 brew "gh"
 brew "fish"
+brew "obs"
 brew "wget"
 
 cask "adobe-creative-cloud"
