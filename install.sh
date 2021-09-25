@@ -2,6 +2,19 @@
 
 set -u
 
+# 公開鍵をGitHubに登録
+echo "generate SSH Key"
+ssh-keygen -t ed25519 -C "mono0423@gmail.com"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+
+echo "公開鍵を登録してください"
+echo "GitHubを開くには、エンターを押してください"
+read
+open https://github.com/settings/keys
+
 # 実行場所のディレクトリを取得
 THIS_DIR=$(cd $(dirname $0); pwd)
 
