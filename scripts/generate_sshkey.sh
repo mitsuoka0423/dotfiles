@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "ssh-keygen -t ed25519 -C "mono0423@gmail.com""
 ssh-keygen -t ed25519 -C "mono0423@gmail.com"
