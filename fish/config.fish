@@ -21,8 +21,7 @@ set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
 # alias
-alias g='cd (ghq root)/(ghq list | peco)'
-alias gg='ghq get -p'
+alias g='code (ghq root)/(ghq list | peco)'
 
 # functions
 function ghcr
