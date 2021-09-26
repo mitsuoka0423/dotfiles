@@ -2,7 +2,6 @@
 set -x PATH $HOME/.rbenv/shims $PATH
 set -x PATH $HOME/.nodebrew/current/bin $PATH
 
-
 #Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -26,14 +25,16 @@ alias g='code (ghq root)/(ghq list | peco)'
 # functions
 function ghcr
   gh repo create $argv
-  ghq get git@github.com:tmitsuoka0423/$argv[1]
-  code (ghq list --full-path -e $argv[1])
+  ghq get -p tmitsuoka0423/$argv
+  code (ghq list --full-path -e $argv)
 end
 
 function ghcl
   set repo (gh repo list $argv | awk '{ print $1 }' | peco)
-  ghq get -p $repo
-  code (ghq list --full-path -e $repo)
+  if [ -n "$repo" ]
+    ghq get -p $repo
+    code (ghq list --full-path -e $repo)
+  end
 end
 
 # others
