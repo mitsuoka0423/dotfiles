@@ -22,13 +22,19 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 # alias
 alias g='cd (ghq root)/(ghq list | peco)'
-alias gg='ghq get'
+alias gg='ghq get -p'
 
 # functions
 function ghcr
   gh repo create $argv
   ghq get git@github.com:tmitsuoka0423/$argv[1]
   code (ghq list --full-path -e $argv[1])
+end
+
+function ghcl
+  set repo (gh repo list $argv | awk '{ print $1 }' | peco)
+  ghq get -p $repo
+  code (ghq list --full-path -e $repo)
 end
 
 # others
