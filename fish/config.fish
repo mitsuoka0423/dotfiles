@@ -39,5 +39,6 @@ end
 
 # others
 eval (ssh-agent -c)
+ssh-add ~/.ssh/id_ed25519
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
