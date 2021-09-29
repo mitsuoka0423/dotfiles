@@ -16,6 +16,9 @@ xcode-select --install
 echo "homebrewをインストールしています"
 which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "brew doctorを実行しています"
 which brew >/dev/null 2>&1 && brew doctor
 
