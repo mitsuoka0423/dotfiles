@@ -22,6 +22,12 @@ hdiutil mount Stack-3.36.1.dmg
 cp -r /Volumes/Stack\ 3.36.1/Stack.app /Applications
 hdiutil detach /Volumes/Stack\ 3.36.
 
+echo 'Google日本語入力'
+wget https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg
+hdiutil mount GoogleJapaneseInput.dmg
+open /Volumes/GoogleJapaneseInput/GoogleJapaneseInput.pkg
+hdiutil detach /Volumes/GoogleJapaneseInput
+
 cat << END
 
 **************************************************
