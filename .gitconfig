@@ -16,13 +16,13 @@
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	b = "!f(){ git branch $1 && git switch $1;};f"
-	c = commit -m
+	c = commit -am
 	ch = checkout
 	drag = pull --rebase
 	l = log --oneline --graph
 	sw = switch
-	st = status
-	sync = git pull --rebase && git push
+	st = status --short --branch
+	sync = !git pull --rebase && git push
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
 [filter "lfs"]
