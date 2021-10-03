@@ -19,6 +19,7 @@
 	b = "!f(){ git branch $1 && git switch $1;};f"
 	c = commit -am
 	ch = checkout
+	df = diff --color-words
 	drag = pull --rebase
 	l = log --oneline --graph
 	sw = switch
