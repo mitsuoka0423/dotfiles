@@ -25,7 +25,7 @@ alias g='code (ghq root)/(ghq list | peco)'
 # functions
 function ghcr
   gh repo create $argv
-  ghq get -p tmitsuoka0423/$argv
+  ghq get -p mitsuoka0423/$argv
   code (ghq list --full-path -e $argv)
 end
 
