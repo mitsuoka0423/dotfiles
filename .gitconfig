@@ -11,6 +11,7 @@
 	postBuffer = 200M
 [credential]
 	helper = wincred
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [push]
 	default = simple
 [alias]
@@ -36,3 +37,5 @@
 	ff = only
 [init]
 	defaultBranch = main
+[credential "https://dev.azure.com"]
+	useHttpPath = true
