@@ -23,6 +23,7 @@
 	df = diff --color-words
 	drag = pull --rebase
 	l = log --oneline --graph
+	ps = push
 	sw = switch
 	st = status --short --branch
 	sync = !git pull --rebase && git push
