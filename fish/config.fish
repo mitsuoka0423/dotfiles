@@ -39,4 +39,5 @@ end
 
 # others
 set -gx VOLTA_HOME "$HOME/.volta"
+set -gx VOLTA_HOME "$HOME/.cargo/bin"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
