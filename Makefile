@@ -4,7 +4,7 @@ URL_PO         = https://github.com/protoout/po
 URL_PO_COMMON  = https://github.com/protoout/po-common
 
 ## スニペット
-po: repo-po web-po-common
+po: repo-po web-po
 po-common: repo-po-common web-po-common
 
 ## リポジトリ系
