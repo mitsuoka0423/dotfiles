@@ -39,5 +39,10 @@ end
 
 # others
 set -gx VOLTA_HOME "$HOME/.volta"
-set -gx VOLTA_HOME "$HOME/.cargo/bin"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+set -gx CARGO_HOME "$HOME/.cargo"
+set -gx PATH "$CARGO_HOME/bin" $PATH
+
+set -gx FLUTTER_HOME "$HOME/develop/flutter"
+set -gx PATH "$FLUTTER_HOME/bin" $PATH

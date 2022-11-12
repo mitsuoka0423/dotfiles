@@ -2,12 +2,15 @@
 
 FLUTTER_URL=https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.3.8-stable.zip
 
-cd ~/Downloads
+if [ ! -e {~/develop} ]; then
+  mkdir ~/develop 
+fi
+cd ~/develop
 
 sudo softwareupdate --install-rosetta --agree-to-license
 wget ${FLUTTER_URL}
-unzip ~/Downloads/flutter_macos_*-stable.zip
-export PATH="$PATH:`pwd`/flutter/bin"
+unzip ./flutter_macos_*-stable.zip
+rm -f ./flutter_macos_*-stable.zip
 flutter doctor
 
 cd ~
