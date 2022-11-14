@@ -9,6 +9,7 @@ echo "開発に必要なツールをインストールしています..."
 zsh ./scripts/install_volta.sh
 zsh ./scripts/install_cargo.sh
 zsh ./scripts/install_flutter.sh
+zsh ./scripts/install_golang.sh
 zsh ./scripts/install_homebrew_app.sh
 zsh ./scripts/download_app.sh
 
