@@ -46,3 +46,6 @@ set -gx PATH "$CARGO_HOME/bin" $PATH
 
 set -gx FLUTTER_HOME "$HOME/develop/flutter"
 set -gx PATH "$FLUTTER_HOME/bin" $PATH
+
+set -gx BUN_HOME "$HOME/.bun"
+set -gx PATH "$BUN_HOME/bin" $PATH
