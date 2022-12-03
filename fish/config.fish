@@ -49,3 +49,6 @@ set -gx PATH "$FLUTTER_HOME/bin" $PATH
 
 set -gx BUN_HOME "$HOME/.bun"
 set -gx PATH "$BUN_HOME/bin" $PATH
+
+set -gx DENO_HOME "$HOME/.deno"
+set -gx PATH "$DENO_HOME/bin" $PATH
