@@ -39,7 +39,7 @@ end
 
 # scripts
 eval (ssh-agent -c)
-ssh-add ~/.ssh/id_ed25519
+ssh-add -K
 
 # others
 set -gx VOLTA_HOME "$HOME/.volta"
