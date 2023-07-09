@@ -3,9 +3,11 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 brew "mas"
+brew "gcc"
 brew "git"
 brew "git-lfs"
 brew "gh"
+brew "go-task"
 brew "fish"
 brew "wget"
 
