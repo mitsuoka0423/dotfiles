@@ -1,6 +1,7 @@
 [user]
 	name = Takahiro Mitsuoka
 	email = tmitsuoka0423@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGOOrT5f7WUWdoiq4wP7U8OOkrd6ixRxV6qDYz/AqYcL
 [core]
 	quotepath = false
 	autocrlf = false
@@ -40,3 +41,9 @@
 	defaultBranch = main
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

@@ -23,10 +23,6 @@ for f in .??*; do
     ln -snfv ${THIS_DIR}/"$f" ~
 done
 
-# fish系
-ln -sf ${THIS_DIR}/fish ~/.config/fish
-ln -sf ${THIS_DIR}/fisher ~/.config/fisher
-
 echo "スクリーンショット保存場所を変更しています..."
 mkdir ~/Pictures/Screenshots
 defaults write com.apple.screencapture location ~/Pictures/Screenshots/;killall SystemUIServer
