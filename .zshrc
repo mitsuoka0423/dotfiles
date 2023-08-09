@@ -24,3 +24,6 @@ export PATH="$ANDROID_NDK_HOME:$PATH"
 ## java sdk
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+## flutter
+export PATH="$HOME/develop/flutter/bin:$PATH"

@@ -11,6 +11,11 @@ sudo softwareupdate --install-rosetta --agree-to-license
 wget ${FLUTTER_URL}
 unzip ./flutter_macos_*-stable.zip
 rm -f ./flutter_macos_*-stable.zip
+
+echo '## flutter' >> ~/.zshrc
+echo 'export PATH="$HOME/develop/flutter/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
 flutter doctor
 
 cd ~
