@@ -5,7 +5,7 @@ ssh-add --apple-use-keychain
 
 # alias
 alias g='echo $(ghq root)/$(ghq list | peco)'
-alias c='code $(ghq root)/$(ghq list | peco)'
+alias c='code $(g)'
 
 
 # path
