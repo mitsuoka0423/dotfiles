@@ -1,12 +1,13 @@
 # THIS_DIR="$(dirname $0)"
-THIS_DIR='/Users/mitsu/ghq/github.com/tmitsuoka0423/dotfiles'
+THIS_DIR='/Users/mitsu/ghq/github.com/mitsuoka0423/dotfiles'
 echo $THIS_DIR
 cd "$THIS_DIR"
 
-for f in .??*; do
-    [[ "$f" == ".git" ]] && continue
-    [[ "$f" == "configs" ]] && continue
-    ln -snfv "$THIS_DIR/$f" "$HOME"
-done
+ln -snfv "$THIS_DIR/.gitconfig" "$HOME"
+ln -snfv "$THIS_DIR/.gitignore_global" "$HOME"
+ln -snfv "$THIS_DIR/.zprofile" "$HOME"
+ln -snfv "$THIS_DIR/.zshrc" "$HOME"
+ln -snfv "$THIS_DIR/Makefile" "$HOME"
+
 
 cd ~
