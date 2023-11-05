@@ -30,3 +30,4 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 ## flutter
 export PATH="$HOME/develop/flutter/bin:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
