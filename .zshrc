@@ -4,7 +4,9 @@ ssh-add --apple-use-keychain
 
 
 # alias
+alias android='open -na "/Applications/Android Studio.app" --args'
 alias g='echo $(ghq root)/$(ghq list | peco)'
+alias a='android $(g)'
 alias c='code $(g)'
 alias cu='cursor $(g)'
 
