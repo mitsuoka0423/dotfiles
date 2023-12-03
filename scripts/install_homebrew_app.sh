@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-### メモ
-#さきにApp storeにログインしておく
-#install.shを実行しておく
+# さきにApp storeにログインしておく
+echo "App Store にログインしてください"
+echo "ログインできたら、Enter キーを押してください"
+open /System/Applications/App\ Store.app
+read
 
 ### homebrew
 echo "homebrewをインストールしています"

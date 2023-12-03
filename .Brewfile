@@ -8,20 +8,21 @@ brew "git"
 brew "git-lfs"
 brew "gh"
 brew "go-task"
-brew "fish"
 brew "wget"
 
 cask "1password"
+cask "arc"
 cask "authy"
-cask "bettertouchtool"
 cask "brave-browser"
 cask "cheatsheet"
-cask "iterm2"
+cask "cursor"
+cask "karabiner-elements"
 cask "obs"
 cask "raycast"
 cask "visual-studio-code"
-cask "vnc-viewer"
+cask "warp"
 
-mas "BetterSnapTool", id: 417375580
 mas 'Display Menu', id: 549083868
 mas 'LINE', id: 539883307
+mas 'Monosnap', id: 540348655
+mas 'QuickImageUploader', id: 1609831553
