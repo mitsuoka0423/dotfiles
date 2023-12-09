@@ -9,6 +9,7 @@ ln -snfv "$THIS_DIR/.gitconfig" "$HOME"
 ln -snfv "$THIS_DIR/.gitignore_global" "$HOME"
 ln -snfv "$THIS_DIR/.zprofile" "$HOME"
 ln -snfv "$THIS_DIR/.zshrc" "$HOME"
+ln -snfv "$THIS_DIR/flake.nix" "$HOME"
 ln -snfv "$THIS_DIR/Makefile" "$HOME"
 
 

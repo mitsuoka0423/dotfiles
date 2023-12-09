@@ -18,6 +18,7 @@ xcode-select --install
 
 echo "開発に必要なツールをインストールしています..."
 zsh ./scripts/install_homebrew_app.sh
+zsh ./scripts/install_nix.sh
 zsh ./scripts/install_flutter.sh
 zsh ./scripts/download_app.sh
 
