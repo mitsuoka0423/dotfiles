@@ -4,11 +4,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     unstable.url = "nixpkgs/nixos-unstable";
     devenv.url = "github:cachix/devenv/latest";
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, unstable, devenv, fenix }: {
