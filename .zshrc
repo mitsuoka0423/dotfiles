@@ -31,3 +31,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 ## flutter
 export PATH="$HOME/develop/flutter/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
+
+
+# home manager
+$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh

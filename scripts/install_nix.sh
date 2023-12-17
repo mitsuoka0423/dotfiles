@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+sudo rm /etc/*.backup-before-nix
+
 # nix
 sh <(curl -L https://nixos.org/nix/install)
 
