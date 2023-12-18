@@ -1,16 +1,35 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  home.username = "mitsu";
-  home.homeDirectory = "/Users/mitsu";
-  home.stateVersion = "22.05";
+  home.username = "nix";
+  home.homeDirectory = "/Users/nix";
 
+  home.stateVersion = "23.11";
 
-  programs.direnv = {
-    enable = true;
+  home.packages = [
+    pkgs._1password
+    pkgs.fzf
+    pkgs.ghq
+    pkgs.peco
+    pkgs.wget
+  ];
 
-    nix-direnv.enable = true;
+  home.file = {
+    ".ssh/config".text = ''
+      Host *
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"%
+    '';
   };
+
+  home.sessionVariables = {
+    EDITOR = "code";
+    NIXPKGS_ALLOW_UNFREE = "1";
+  };
+
+
+  programs.home-manager.enable = true;
 
 
   programs.gh = {
@@ -49,37 +68,30 @@
   };
 
 
-  programs.home-manager = {
+  programs.vscode = {
     enable = true;
+    
+    extensions = [
+    ];
   };
 
 
   programs.zsh = {
     enable = true;
 
-    completionInit = "autoload -U compinit && compinit -u";
-    dotDir = ".config/zsh";
-    syntaxHighlighting = {
-      enable = true;
-    };
-    envExtra = ''
-      export NIX_PATH=$HOME/.nix-defexpr/channels
-
-      if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
-        . ~/.nix-profile/etc/profile.d/nix.sh
-      fi
-    '';
-    history = {
-      extended = true;
-      save = 1000000;
-      size = 1000000;
-    };
     shellAliases = {
-      android = "open -na \"/Applications/Android Studio.app\" --args";
-      g = "echo $(ghq root)/$(ghq list | peco)";
-      a = "android $(g)";
-      c = "code $(g)";
-      cu = "cursor $(g)";
+      "g" = "echo $(ghq root)/$(ghq list | peco)";
+      "c" = "code $(g)";
+      "gd" = "cd $(g)";
+    };
+
+    oh-my-zsh = {
+      enable = true;
+
+      plugins = [
+        "git"
+      ];
+      theme = "juanghurtado";
     };
   };
 }
