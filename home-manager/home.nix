@@ -26,6 +26,7 @@
   home.sessionVariables = {
     EDITOR = "code";
     NIXPKGS_ALLOW_UNFREE = "1";
+    NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
   };
 
 
@@ -79,9 +80,20 @@
   programs.zsh = {
     enable = true;
 
+    initExtraFirst = ''
+      eval "$(ssh-agent -s)"
+      ssh-add --apple-use-keychain
+    '';
+
+    initExtra = ''
+      eval $(/opt/homebrew/bin/brew shellenv)
+    '';
+
     shellAliases = {
-      "g" = "echo $(ghq root)/$(ghq list | peco)";
+      "android" = "open -na \"/Applications/Android Studio.app\" --args";
       "c" = "code $(g)";
+      "cu" = "cursor $(g)";
+      "g" = "echo $(ghq root)/$(ghq list | fzf --reverse)";
       "gd" = "cd $(g)";
     };
 
@@ -91,7 +103,7 @@
       plugins = [
         "git"
       ];
-      theme = "juanghurtado";
+      theme = "jonathan";
     };
   };
 }
