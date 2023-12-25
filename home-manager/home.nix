@@ -10,6 +10,7 @@
     pkgs._1password
     pkgs.fzf
     pkgs.ghq
+    pkgs.nodejs
     pkgs.peco
     pkgs.wget
   ];
