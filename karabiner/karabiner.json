@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change left_control+ws to arrow keys",
+                        "description": "Change left_control + ws to display control",
                         "manipulators": [
                             {
                                 "from": {
@@ -63,7 +63,52 @@
                         ]
                     },
                     {
-                        "description": "Change left_control+ijkl to arrow keys",
+                        "description": "Change left_control + [] to previous / next display",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change left_control + ijkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
