@@ -7,7 +7,8 @@ ln -snfv "$THIS_DIR/.Brewfile" "$HOME"
 ln -snfv "$THIS_DIR/.Brewfile.lock.json" "$HOME"
 ln -snfv "$THIS_DIR/Makefile" "$HOME"
 ln -snfv "$THIS_DIR/home-manager/home.nix" "$HOME/.config/home-manager"
-ln -snfv "$THIS_DIR/karabiner/karabiner.json" "$HOME/.config/karabiner"
+# NOTE: シンボリックリンクでは設定が反映されなかったため、ハードリンクに変更
+ln -v "$THIS_DIR/karabiner/karabiner.json" "$HOME/.config/karabiner"
 ln -snfv "$THIS_DIR/nix/nix.conf" "$HOME/.config/nix"
 
 cd ~
