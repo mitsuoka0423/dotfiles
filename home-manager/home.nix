@@ -8,6 +8,7 @@
 
   home.packages = [
     pkgs._1password
+    pkgs.firebase-tools
     pkgs.fzf
     pkgs.ghq
     pkgs.nodejs
