@@ -15,7 +15,6 @@ cask "visual-studio-code"
 cask "warp"
 
 mas 'Display Menu', id: 549083868
-mas 'Heptabase', id: 6445801508
 mas 'LINE', id: 539883307
 mas 'Monosnap', id: 540348655
 mas 'QuickImageUploader', id: 1609831553
