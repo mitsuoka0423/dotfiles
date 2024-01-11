@@ -89,6 +89,9 @@
 
     initExtra = ''
       eval $(/opt/homebrew/bin/brew shellenv)
+      export ANDROID_HOME=/Users/nix/Library/Android/sdk
+      export ANDROID_SDK_ROOT=/Users/nix/Library/Android/sdk
+      export PATH=$PATH:$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
     '';
 
     shellAliases = {
