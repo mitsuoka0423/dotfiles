@@ -13,6 +13,7 @@
     pkgs.ghq
     pkgs.nodejs
     pkgs.peco
+    pkgs.tree
     pkgs.wget
   ];
 
