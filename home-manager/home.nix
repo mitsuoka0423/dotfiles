@@ -84,15 +84,19 @@
     enable = true;
 
     initExtraFirst = ''
-      eval "$(ssh-agent -s)"
-      ssh-add --apple-use-keychain
+      eval $(ssh-agent -s)
+      eval $(/opt/homebrew/bin/brew shellenv)
     '';
 
     initExtra = ''
-      eval $(/opt/homebrew/bin/brew shellenv)
-      export ANDROID_HOME=/Users/nix/Library/Android/sdk
-      export ANDROID_SDK_ROOT=/Users/nix/Library/Android/sdk
-      export PATH=$PATH:$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+      # path
+      export ANDROID_HOME=~/Library/Android/sdk
+      export ANDROID_SDK_ROOT=~/Library/Android/sdk
+      export FLUTTER_HOME=~/dev/flutter
+      export PATH=$PATH:$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$FLUTTER_HOME/bin
+
+      # Dev Container からホストの SSH 鍵を参照するため
+      # @SEE https://horimisli.me/entry/use-1password-ssh-key-from-container/
       if [[ "$OSTYPE" == "darwin"* ]]; then
         export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
       fi
