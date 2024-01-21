@@ -3,9 +3,23 @@
 cd ~/Downloads
 
 echo 'Android Studio'
-wget https://redirector.gvt1.com/edgedl/android/studio/install/2021.3.1.17/android-studio-2021.3.1.17-mac_arm.dmg
-hdiutil mount android-studio-2021.3.1.17-mac_arm.dmg
-cp -R /Volumes/Android\ Studio\ -\ Dolphin\ \|\ 2021.3.1\ Patch\ 1/Android\ Studio.app /Applications
-hdiutil detach /Volumes/Android\ Studio\ -\ Dolphin\ \|\ 2021.3.1\ Patch\ 1
+
+
+# ダウンロード
+if [ -f ~/Downloads/android-studio-2023.1.1.27-mac_arm.dmg ]; then
+  echo "File already exists, skipping download"
+else
+  wget 'https://redirector.gvt1.com/edgedl/android/studio/install/2023.1.1.27/android-studio-2023.1.1.27-mac_arm.dmg'
+fi
+
+
+# インストール
+hdiutil mount android-studio-2023.1.1.27-mac_arm.dmg
+cp -R -v '/Volumes/Android Studio - Hedgehog | 2023.1.1 Patch 1' /Applications
+
+
+# お掃除
+hdiutil detach '/Volumes/Android Studio - Hedgehog | 2023.1.1 Patch 1'
+rm -f android-studio-2023.1.1.27-mac_arm.dmg
 
 cd ~
