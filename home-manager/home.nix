@@ -93,7 +93,8 @@
       export ANDROID_HOME=~/Library/Android/sdk
       export ANDROID_SDK_ROOT=~/Library/Android/sdk
       export FLUTTER_HOME=~/dev/flutter
-      export PATH=$PATH:$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$FLUTTER_HOME/bin
+      export RUBY_HOME=/opt/homebrew/opt/ruby
+      export PATH=$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$PATH
 
       # Dev Container からホストの SSH 鍵を参照するため
       # @SEE https://horimisli.me/entry/use-1password-ssh-key-from-container/
