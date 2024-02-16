@@ -6,3 +6,6 @@ edit:
 
 setup:
 	zsh ./setup.sh
+
+brew:
+	brew bundle --file=./.Brewfile --no-lock
