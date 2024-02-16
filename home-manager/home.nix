@@ -83,6 +83,8 @@
   programs.zsh = {
     enable = true;
 
+    enableAutosuggestions = true;
+
     initExtraFirst = ''
       eval $(ssh-agent -s)
       eval $(/opt/homebrew/bin/brew shellenv)
