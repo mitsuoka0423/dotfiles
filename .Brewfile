@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
 
+brew "jj"
+
 cask "1password"
 cask "arc"
 cask "authy"
