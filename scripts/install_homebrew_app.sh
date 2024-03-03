@@ -22,4 +22,4 @@ echo "homebrew周りの設定が終了しました"
 
 ### .Brewfileに記載されているアプリをインストール
 echo ".Brewfileに記載されているアプリをインストールします"
-brew bundle --global --verbose
+brew bundle --file=./.Brewfile --verbose
