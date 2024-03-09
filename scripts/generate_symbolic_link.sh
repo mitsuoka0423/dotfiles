@@ -1,5 +1,5 @@
 # THIS_DIR="$(dirname $0)"
-THIS_DIR="/Users/$(id -un)/ghq/github.com/mitsuoka0423/dotfiles"
+THIS_DIR="/Users/$(id -un)/Desktop/dotfiles"
 echo $THIS_DIR
 cd $THIS_DIR
 

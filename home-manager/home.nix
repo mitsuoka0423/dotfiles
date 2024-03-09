@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "nix";
-  home.homeDirectory = "/Users/nix";
+  home.username = "protoout2";
+  home.homeDirectory = "/Users/protoout2";
 
   home.stateVersion = "23.11";
 
