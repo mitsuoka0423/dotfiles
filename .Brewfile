@@ -12,6 +12,7 @@ cask "karabiner-elements"
 cask "notion-calendar"
 cask "obs"
 cask "raycast"
+cask "spotify"
 cask "visual-studio-code"
 cask "warp"
 
