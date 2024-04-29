@@ -13,13 +13,7 @@ defaults write com.apple.screencapture location ~/Screenshots/;killall SystemUIS
 echo "dotfileにシンボリックリンクを設定しています..."
 zsh ./scripts/generate_symbolic_link.sh
 
-echo "Command Line Tools for Xcodeのインストールをします"
-xcode-select --install
-
 echo "開発に必要なツールをインストールしています..."
-zsh ./scripts/install_homebrew_app.sh
-zsh ./scripts/install_nix.sh
-zsh ./scripts/install_flutter.sh
 zsh ./scripts/download_app.sh
 
 cat << END
