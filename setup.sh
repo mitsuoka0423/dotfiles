@@ -7,8 +7,9 @@ echo "不可視ファイルを可視化します..."
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
 echo "スクリーンショット保存場所を変更しています..."
-mkdir ~/Screenshots
-defaults write com.apple.screencapture location ~/Screenshots/;killall SystemUIServer
+[ -d "~/Screenshots" ] || mkdir ~/Screenshots
+defaults write com.apple.screencapture location ~/Screenshots/;
+killall SystemUIServer
 
 echo "dotfileにシンボリックリンクを設定しています..."
 zsh ./scripts/generate_symbolic_link.sh

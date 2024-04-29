@@ -15,7 +15,7 @@ open /Volumes/GoogleJapaneseInput/GoogleJapaneseInput.pkg
 hdiutil detach /Volumes/GoogleJapaneseInput
 
 
-sh ./download/Docker.sh
+sh ~/ghq/github.com/mitsuoka0423/dotfiles/scripts/download/Docker.sh
 
 
 cd ~
