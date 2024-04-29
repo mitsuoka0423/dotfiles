@@ -1,20 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "nix";
-  home.homeDirectory = "/Users/nix";
+  home.username = "mitsu";
+  home.homeDirectory = "/Users/mitsu";
 
   home.stateVersion = "23.11";
 
-  home.packages = [
-    pkgs._1password
-    pkgs.firebase-tools
-    pkgs.fzf
-    pkgs.ghq
-    pkgs.peco
-    pkgs.tree
-    pkgs.wget
-  ];
+  home.packages = [];
 
   home.file = {
     ".ssh/config".text = ''
@@ -33,15 +25,6 @@
 
 
   programs.home-manager.enable = true;
-
-
-  programs.gh = {
-    enable = true;
-
-    settings = {
-      gitProtocol = "ssh";
-    };
-  };
 
 
   programs.git = {
@@ -71,18 +54,12 @@
   };
 
 
-  programs.vscode = {
-    enable = true;
-
-    extensions = [
-    ];
-  };
-
-
   programs.zsh = {
     enable = true;
 
-    enableAutosuggestions = true;
+    autosuggestion = {
+      enable = true;
+    };
 
     initExtraFirst = ''
       eval $(ssh-agent -s)
