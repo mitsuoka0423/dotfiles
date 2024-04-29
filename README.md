@@ -41,6 +41,7 @@ echo "アプリをインストールします"
 brew tap "homebrew/bundle"
 
 brew install fzf
+brew install gh
 brew install ghq
 brew install jj
 brew install mas
