@@ -82,9 +82,9 @@ ghq get git@github.com:mitsuoka0423/dotfiles.git
 code  ~/ghq/github.com/mitsuoka0423/dotfiles
 zsh ./scripts/install_nix.sh
 zsh
-zsh ./scripts/install_home_manager.sh
 ```
 
 ```bash
 zsh ./scripts/install_home_manager.sh
+make switch
 ```
