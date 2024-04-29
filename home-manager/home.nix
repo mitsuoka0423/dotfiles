@@ -50,6 +50,7 @@
       interactive = {
         diffFilter = "${pkgs.git}/share/git/contrib/diff-highlight/diff-highlight";
       };
+      "url \"git@github.com:\"".insteadOf = "https://github.com/";
     };
   };
 
