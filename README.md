@@ -53,6 +53,7 @@ brew install --cask arc
 brew install --cask authy
 brew install --cask brave-browser
 brew install --cask cursor
+brew install --cask deepl
 brew install --cask discord
 brew install --cask docker
 brew install --cask google-chrome
