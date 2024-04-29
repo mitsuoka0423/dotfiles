@@ -65,6 +65,9 @@ brew install --cask warp
 echo "Display menu" && mas install 549083868
 echo "LINE" && mas install 539883307
 echo "Monosnap" && mas install 540348655
+```
+
+### GitHub
 
 ```bash
 gh auth login
