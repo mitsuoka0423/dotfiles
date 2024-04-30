@@ -56,6 +56,7 @@ brew install --cask brave-browser
 brew install --cask cursor
 brew install --cask deepl
 brew install --cask discord
+brew install --cask devtunnel
 brew install --cask docker
 brew install --cask google-chrome
 brew install --cask karabiner-elements
