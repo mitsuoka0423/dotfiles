@@ -10,6 +10,13 @@
 
   home.file = {
     ".ssh/config".text = ''
+      Host mitsu-desktop
+        User mitsu
+        HostName 192.168.11.10
+        Port 22222
+        TCPKeepAlive yes
+        Identitiesonly yes
+        IdentityFile ~/.ssh/id_ed25519_mitsu-desktop.pub
       Host *
         AddKeysToAgent yes
         UseKeychain yes
