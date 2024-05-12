@@ -6,6 +6,3 @@ edit:
 
 setup:
 	zsh ./setup.sh
-
-brew:
-	sh ./scripts/install_homebrew_app.sh

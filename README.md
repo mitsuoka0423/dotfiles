@@ -40,6 +40,7 @@ echo "homebrew周りの設定が終了しました"
 echo "アプリをインストールします"
 brew tap "homebrew/bundle"
 
+brew install azure-cli
 brew install cloudflared
 brew install fzf
 brew install gh
