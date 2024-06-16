@@ -10,7 +10,8 @@
 	"extensions": {
     "recommendations": [
         "bbenoist.nix",
-				"benjaminbenais.copilot-theme"
+				"benjaminbenais.copilot-theme",
+				"eamodio.gitlens"
     ]
 	}
 }
