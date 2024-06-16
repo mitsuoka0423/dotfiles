@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"window.zoomLevel": 0.7
+	},
+	"extensions": {
+    "recommendations": [
+        "bbenoist.nix",
+				"benjaminbenais.copilot-theme"
+    ]
+	}
+}
