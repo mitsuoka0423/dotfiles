@@ -98,10 +98,12 @@
 
     shellAliases = {
       "android" = "open -na \"/Applications/Android Studio.app\" --args";
-      "c" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then code $(repo); fi";
-      "cu" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cursor $(repo); fi";
+      "c" = "cu";
+      "co" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then code \"\${repo}\"; fi";
+      "cu" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cursor \"\${repo}\"; fi";
+      "ze" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then zed \"\${repo}\"; fi";
       "g" = "echo $(ghq root)/$(ghq list | fzf --reverse)";
-      "gd" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cd $(repo); fi";
+      "gd" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cd \"\${repo}\"; fi";
     };
 
     oh-my-zsh = {

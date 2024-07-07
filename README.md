@@ -67,6 +67,7 @@ brew install --cask raycast
 brew install --cask spotify
 brew install --cask visual-studio-code
 brew install --cask warp
+brew install --cask zed
 
 echo "Display menu" && mas install 549083868
 echo "LINE" && mas install 539883307
