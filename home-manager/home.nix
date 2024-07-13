@@ -104,6 +104,8 @@
       "ze" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then zed \"\${repo}\"; fi";
       "g" = "echo $(ghq root)/$(ghq list | fzf --reverse)";
       "gd" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cd \"\${repo}\"; fi";
+      "sw" = "branch=$(git branch | sed 's/\* //' | sed 's/  //' | fzf --reverse); if [[ -n \${branch} ]]; then git switch \${branch}; fi";
+      "del" = "git branch -d $(git branch | fzf --reverse)";
     };
 
     oh-my-zsh = {
