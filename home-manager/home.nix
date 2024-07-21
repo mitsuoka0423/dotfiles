@@ -59,6 +59,10 @@
         diffFilter = "${pkgs.git}/share/git/contrib/diff-highlight/diff-highlight";
       };
       "url \"git@github.com:\"".insteadOf = "https://github.com/";
+      push = {
+        default = "current";
+        autoSetupRemote = "true";
+      };
     };
   };
 
@@ -84,7 +88,8 @@
       export RUBY_HOME=/opt/homebrew/opt/ruby
       export CMDLINE_TOOLS_HOME=~/dev/cmdline-tools
       export VOLTA_HOME=~/.volta
-      export PATH=$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$PATH
+      export DENO_HOME=~/.deno
+      export PATH=$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$DENO_HOME/bin:$PATH
 
       # Dev Container からホストの SSH 鍵を参照するため
       # @SEE https://horimisli.me/entry/use-1password-ssh-key-from-container/
