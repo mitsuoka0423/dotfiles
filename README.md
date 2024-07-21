@@ -70,6 +70,7 @@ brew install --cask warp
 brew install --cask zed
 
 echo "Display menu" && mas install 549083868
+echo "Flow" && mas install 1423210932
 echo "LINE" && mas install 539883307
 echo "Monosnap" && mas install 540348655
 ```
