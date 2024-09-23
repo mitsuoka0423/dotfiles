@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[nix]": {
+			"editor.defaultFormatter": "kamadorueda.alejandra",
+			"editor.formatOnPaste": true,
+			"editor.formatOnSave": true,
+			"editor.formatOnType": false
+		},
+		"alejandra.program": "alejandra",
+		"window.zoomLevel": 0.7
+	},
+	"extensions": {
+    "recommendations": [
+        "bbenoist.nix",
+				"benjaminbenais.copilot-theme",
+				"eamodio.gitlens",
+				"kamadorueda.alejandra"
+    ]
+	}
+}
