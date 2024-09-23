@@ -10,8 +10,13 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      git
       curl
+      fzf
+      gh
+      ghq
+      git
+      tree
+      wget
     ];
 
     file = {
