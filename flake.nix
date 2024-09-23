@@ -31,6 +31,8 @@
         nix flake update
         echo "Updating home-manager..."
         nix run nixpkgs#home-manager -- switch --flake .#myHomeConfig
+        echo "Updating nix-darwin..."
+        nix run nix-darwin -- switch --flake .#darwin
         echo "Update complete!"
       '');
     };
