@@ -1,8 +1,5 @@
-switch:
-	home-manager switch
-
-edit:
-	home-manager edit
+update:
+	nix run .#update
 
 setup:
 	zsh ./setup.sh
