@@ -97,7 +97,7 @@
         export CMDLINE_TOOLS_HOME=~/dev/cmdline-tools
         export VOLTA_HOME=~/.volta
         export DENO_HOME=~/.deno
-        export PATH=$ANDROID_HOME/tools:ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$DENO_HOME/bin:$PATH
+        export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$DENO_HOME/bin:$PATH
 
         # Dev Container からホストの SSH 鍵を参照するため
         # @SEE https://horimisli.me/entry/use-1password-ssh-key-from-container/
@@ -111,7 +111,7 @@
 
       shellAliases = {
         "android" = "open -na \"/Applications/Android Studio.app\" --args";
-        "c" = "cu";
+        "c" = "co";
         "co" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then code \"\${repo}\"; fi";
         "cu" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then cursor \"\${repo}\"; fi";
         "ze" = "repo=$(g); if [[ \${repo} =~ (.+)/ghq/(.+) ]]; then zed \"\${repo}\"; fi";
