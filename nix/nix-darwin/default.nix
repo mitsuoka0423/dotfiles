@@ -24,6 +24,7 @@
       "discord"
       "docker"
       "google-chrome"
+      "ghostty"
       "karabiner-elements"
       "notion-calendar"
       "raycast"
