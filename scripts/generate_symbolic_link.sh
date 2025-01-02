@@ -6,8 +6,10 @@ ln -snfv "$THIS_DIR/.Brewfile" "$HOME"
 ln -snfv "$THIS_DIR/.Brewfile.lock.json" "$HOME"
 ln -snfv "$THIS_DIR/Makefile" "$HOME"
 [ -d "$HOME/.config/karabiner"] || mkdir "$HOME/.config/karabiner"
-ln -snfv "$THIS_DIR/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+ln -snfv "$THIS_DIR/karabiner/karabiner.json" "$HOME/.config/karabiner"
 [ -d "$HOME/.config/zsh"] || mkdir "$HOME/.config/zsh"
 ln -snfv "$THIS_DIR/zsh/headline.zsh-theme" "$HOME/.config/zsh/headline.zsh-theme"
+ln -snfv "$THIS_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
+ln -snfv "$THIS_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User"
 
 cd ~

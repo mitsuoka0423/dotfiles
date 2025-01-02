@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "bierner.markdown-mermaid",
+    "catppuccin.catppuccin-vsc-icons",
+    "eamodio.gitlens",
+    "github.codespaces",
+    "github.copilot-chat",
+    "github.copilot",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "usernamehw.errorlens",
+    "wayou.vscode-todo-highlight",
+    "yoshi389111.visible-whitespace",
+    "yzhang.markdown-all-in-one"
+  ]
+}
