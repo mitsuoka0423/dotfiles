@@ -14,7 +14,6 @@
   },
   "[markdown]": {
     "editor.insertSpaces": true,
-    "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": false
   },
@@ -24,6 +23,7 @@
   "editor.fontFamily": "\"JetBrains Mono\", Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.lineHeight": 1.4,
+  "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "explorer.fileNesting.patterns": {
     "*.db": "${capture}.${extname}-*",

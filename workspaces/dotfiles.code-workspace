@@ -1,0 +1,16 @@
+{
+  "extensions": {
+    "recommendations": [
+      "bbenoist.nix"
+    ]
+  },
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "[nix]": {
+    }
+  }
+}
