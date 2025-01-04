@@ -1,0 +1,15 @@
+{
+  "extensions": {
+    "recommendations": [
+      "biomejs.biome",
+      "taichi.vscode-textlint"
+    ]
+  },
+  "folders": [
+    {
+      "path": "../../mitsuoka0423"
+    }
+  ],
+  "settings": {
+  }
+}

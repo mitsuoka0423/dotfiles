@@ -17,6 +17,9 @@
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": false
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -57,5 +60,6 @@
   "visibleWhitespace.space.enable": true,
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.startupEditor": "none",
-  "workbench.tree.indent": 20
+  "workbench.tree.indent": 20,
+  "window.newWindowProfile": "デフォルト"
 }
