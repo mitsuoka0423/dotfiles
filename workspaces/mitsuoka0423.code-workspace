@@ -11,5 +11,7 @@
     }
   ],
   "settings": {
+    "textlint.autoFixOnSave": true,
+    "textlint.nodePath": "/Users/mitsu/ghq/github.com/mitsuoka0423/mitsuoka0423/src/node_modules"
   }
 }
