@@ -20,23 +20,19 @@
       "authy"
       "brave-browser"
       "cursor"
-      "deepl"
       "discord"
-      "docker"
       "google-chrome"
-      "ghostty"
+      "google-cloud-sdk"
       "karabiner-elements"
       "notion-calendar"
       "raycast"
-      "spotify"
       "visual-studio-code"
       "warp"
-      "zed"
+      "windsurf"
     ];
 
     masApps = {
       "Display menu" = 549083868;
-      "Flow" = 1423210932;
       "Hyper Cursor" = 1634220679;
       "LINE" = 539883307;
       "Monosnap" = 540348655;
@@ -50,7 +46,6 @@
       max-jobs = 8;
     };
   };
-  services.nix-daemon.enable = true;
 
   system = {
     stateVersion = 5;
