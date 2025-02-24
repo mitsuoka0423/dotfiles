@@ -1,0 +1,36 @@
+{
+  "extensions": {
+    "recommendations": [
+      "biomejs.biome",
+      "coolcline.coolcline",
+      "davidanson.vscode-markdownlint",
+      "foxundermoon.shell-format"
+    ]
+  },
+  "folders": [
+    {
+      "path": "../../running-group-line-bot"
+    }
+  ],
+  "settings": {
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+      "editor.codeActionsOnSave": {
+        "quickfix.biome": "explicit"
+      }
+    },
+    "[google-apps-script]": {
+      "editor.defaultFormatter": "biomejs.biome",
+      "editor.codeActionsOnSave": {
+        "quickfix.biome": "explicit"
+      }
+    },
+    "[shellscript]": {
+      "editor.defaultFormatter": "foxunderwoon.shell-format",
+    },
+    "files.associations": {
+      "*.gs": "javascript"
+    },
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  }
+}

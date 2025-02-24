@@ -1,0 +1,18 @@
+{
+  "extensions": {
+    "recommendations": [
+      "platformio.platformio-ide",
+      "RooVeterinaryInc.roo-cline"
+    ]
+  },
+  "folders": [
+    {
+      "path": "../github.com/mitsuoka0423/co2-sensor"
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      ".clinerules": "markdown"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extensions": {
+    "recommendations": [
+      "biomejs.biome",
+      "Prisma.prisma",
+      "RooVeterinaryInc.roo-cline"
+    ]
+  },
+  "folders": [
+    {
+      "path": "../github.com/mitsuoka0423/shikkari-reminder"
+    }
+  ],
+  "settings": {
+  }
+}

@@ -11,5 +11,6 @@ ln -snfv "$THIS_DIR/karabiner/karabiner.json" "$HOME/.config/karabiner"
 ln -snfv "$THIS_DIR/zsh/headline.zsh-theme" "$HOME/.config/zsh/headline.zsh-theme"
 ln -snfv "$THIS_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
 ln -snfv "$THIS_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User"
+ln -snfv "$THIS_DIR/workspace" "$HOME/ghq"
 
 cd ~
