@@ -1,0 +1,27 @@
+{
+  "extensions": {
+    "recommendations": [
+      "DavidAnson.vscode-markdownlint",
+      "RooVeterinaryInc.roo-cline",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "folders": [
+    {
+      "path": "../github.com/mitsuoka0423/bookmarks"
+    }
+  ],
+  "settings": {
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "files.associations": {
+      ".clinerules": "markdown"
+    }
+  }
+}
