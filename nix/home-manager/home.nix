@@ -23,7 +23,7 @@
       ".ssh/config".text = ''
         Host mitsu-desktop
           User mitsu
-          HostName 192.168.11.10
+          HostName 192.168.11.100
           Port 22222
           TCPKeepAlive yes
           Identitiesonly yes
@@ -92,13 +92,14 @@
         # path
         export ANDROID_HOME=~/Library/Android/sdk
         export ANDROID_SDK_ROOT=~/Library/Android/sdk
+        export CARGO_HOME=~/.cargo
         export FLUTTER_HOME=~/dev/flutter
         export RUBY_HOME=/opt/homebrew/opt/ruby
         export CMDLINE_TOOLS_HOME=~/dev/cmdline-tools
         export VOLTA_HOME=~/.volta
         export DENO_HOME=~/.deno
         export UV_HOME=~/.local
-        export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$DENO_HOME/bin:$UV_HOME/bin:$PATH
+        export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$CARGO_HOME/bin:$CMDLINE_TOOLS_HOME/bin:$FLUTTER_HOME/bin:$RUBY_HOME/bin:$VOLTA_HOME/bin:$DENO_HOME/bin:$UV_HOME/bin:$PATH
 
         # Dev Container からホストの SSH 鍵を参照するため
         # @SEE https://horimisli.me/entry/use-1password-ssh-key-from-container/
