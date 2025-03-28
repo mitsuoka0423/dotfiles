@@ -9,6 +9,17 @@
       ],
       "env": {}
     },
+    "git": {
+      "command": "/usr/local/bin/docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--mount",
+        "type=bind,src=/Users/mitsu/ghq/github.com/mitsuoka0423/dotfiles,dst=/Users/mitsu/ghq/github.com/mitsuoka0423/dotfiles",
+        "mcp/git"
+      ]
+    },
     "memory": {
       "command": "/Users/mitsu/.volta/bin/npx",
       "args": [
@@ -24,7 +35,8 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/Users/mitsu/ghq/github.com/mitsuoka0423/home-server"
+        "/Users/mitsu/ghq/github.com/mitsuoka0423/home-server",
+        "/Users/mitsu/ghq/github.com/mitsuoka0423/dotfiles"
       ]
     },
     "playwright": {
