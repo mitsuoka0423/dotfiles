@@ -21,6 +21,13 @@
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cline.preferredLanguage": "Japanese - 日本語",
+  "cSpell.userWords": [
+    "STACKDRIVER"
+  ],
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -48,19 +55,11 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
   "github.copilot.chat.generateTests.codeLens": true,
   "github.copilot.chat.search.semanticTextResults": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "remote.autoForwardPortsSource": "hybrid",
-  "todohighlight.defaultStyle": {
-    "isWholeLine": true
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "visibleWhitespace.htab.enable": true,
-  "visibleWhitespace.space.enable": true,
-  "window.newWindowProfile": "デフォルト",
-  "workbench.startupEditor": "none",
-  "workbench.tree.indent": 20,
   "roo-cline.allowedCommands": [
     "npm test",
     "npm install",
@@ -71,10 +70,14 @@
     "docker-compose",
     "curl",
     "docker",
-    "platformio"
-  ],
-  "cSpell.userWords": [
-    "STACKDRIVER"
+    "platformio",
+    "git pull",
+    "git add",
+    "git commit",
+    "gh pr create",
+    "gh pr edit",
+    "git checkout",
+    "git switch"
   ],
   "terminal.integrated.allowedLinkSchemes": [
     "file",
@@ -85,7 +88,16 @@
     "vscode-insiders",
     "docker-desktop"
   ],
-  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "todohighlight.defaultStyle": {
+    "isWholeLine": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "visibleWhitespace.htab.enable": true,
+  "visibleWhitespace.space.enable": true,
+  "window.newWindowProfile": "デフォルト",
+  "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "catppuccin-macchiato",
-  "workbench.colorTheme": "Ayu Mirage"
+  "workbench.secondarySideBar.showLabels": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 20
 }
