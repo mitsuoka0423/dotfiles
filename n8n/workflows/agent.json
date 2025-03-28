@@ -1,0 +1,416 @@
+{
+  "name": "エージェント",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/v2/bot/message/reply",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"replyToken\": \"{{ $('Webhook from Line Message').item.json.body.events[0].replyToken }}\",\n  \"messages\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"未対応のメッセージです： {{ $('Webhook from Line Message').item.json.body.events[0].message.text }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "27ff4295-18f1-4a06-83c8-bd334a4a5f0b",
+      "name": "Line : Reply with token",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        760,
+        -40
+      ],
+      "typeVersion": 4.2,
+      "alwaysOutputData": true,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pfmoZAgsGveHX6sK",
+          "name": "LINE Messaging API Auth Bearer"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "638c118e-1c98-4491-b6ff-14e2e75380b6",
+        "options": {}
+      },
+      "id": "f51e11f1-0df2-4380-9db3-fc5235031c99",
+      "name": "Webhook from Line Message",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        60
+      ],
+      "webhookId": "638c118e-1c98-4491-b6ff-14e2e75380b6",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Webhook from Line Message').item.json.body.events[0].message.type }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "d7b30029-f50b-4dd6-b497-0d6266025821"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c853eb7a-7247-45ad-99e5-00a34c9d3581",
+                    "leftValue": "={{ $('Webhook from Line Message').item.json.body.events[0].message.type }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        540,
+        60
+      ],
+      "id": "99380071-5947-4c03-b9ef-5b5b2a1f404d",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "text": "あなたはスケジュールを登録するアシスタントです。\n送られた画像からスケジュールの情報を抽出してください。\n\n- タイトル\n- 開始日時\n- 終了日時\n- 場所",
+        "inputType": "base64",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        980,
+        160
+      ],
+      "id": "15e0cd2f-9258-4b1f-bdc1-a3d3ad238823",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "93tigXSz8KH2ODVj",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/v2/bot/message/reply",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"replyToken\": \"{{ $('Webhook from Line Message').item.json.body.events[0].replyToken }}\",\n  \"messages\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"カレンダーにスケジュールを登録しました。\\n{{ $json.deepLink }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "58c1dacd-860f-4e39-a684-10f6b4288196",
+      "name": "Line : Reply with token1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2016,
+        160
+      ],
+      "typeVersion": 4.2,
+      "alwaysOutputData": true,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pfmoZAgsGveHX6sK",
+          "name": "LINE Messaging API Auth Bearer"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=あなたはスケジュール登録エージェントです。\n下記のスケジュールをGoogleカレンダーに登録するために、JSON形式にコンバートしてください。\n\n```plaintext\n{{ $json.content }}\n```"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1200,
+        160
+      ],
+      "id": "d34001c3-9ef8-47f2-b3aa-66b08698d4f8",
+      "name": "OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "93tigXSz8KH2ODVj",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "mono0423@gmail.com",
+          "mode": "list",
+          "cachedResultName": "mono0423@gmail.com"
+        },
+        "start": "={{ $json.message.content.start.dateTime }}",
+        "end": "={{ $json.message.content.end.dateTime }}",
+        "additionalFields": {
+          "description": "n8nにより自動追加されました。",
+          "location": "={{ $json.message.content.location }}",
+          "summary": "={{ $json.message.content.summary }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1576,
+        160
+      ],
+      "id": "c9df1b91-2034-47fa-b36f-ccab5c0f0fd5",
+      "name": "Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "K49stfzDGKlLwUXQ",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/v2/bot/chat/loading/start",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chatId",
+              "value": "={{ $json.body.events[0].source.userId }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        320,
+        60
+      ],
+      "id": "14ea09b6-50d7-496d-b2d4-9755e71dbfa0",
+      "name": "LINE ローディング",
+      "alwaysOutputData": true,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pfmoZAgsGveHX6sK",
+          "name": "LINE Messaging API Auth Bearer"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api-data.line.me/v2/bot/message/{{ $('Webhook from Line Message').item.json.body.events[0].message.id }}/content",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        760,
+        160
+      ],
+      "id": "9ac100e5-7cf5-47b6-96f6-bb596e383603",
+      "name": "LINE 画像ダウンロード",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pfmoZAgsGveHX6sK",
+          "name": "LINE Messaging API Auth Bearer"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and replace htmlLink field with iOS deep link\nfor (const item of $input.all()) {\n  if (item.json.htmlLink) {\n    // Extract the eid parameter from the current URL\n    const eidMatch = item.json.htmlLink.match(/eid=([^&]+)/);\n    \n    if (eidMatch && eidMatch[1]) {\n      const eid = eidMatch[1];\n      // Create iOS deep link for Google Calendar\n      item.json.deepLink = `googlecalendar://calendar/events?eid=${eid}`;\n    }\n  }\n}\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1796,
+        160
+      ],
+      "id": "989deace-db29-4aad-9448-e75715aa107b",
+      "name": "新URLに置換する",
+      "alwaysOutputData": true
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook from Line Message": {
+      "main": [
+        [
+          {
+            "node": "LINE ローディング",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Line : Reply with token",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "LINE 画像ダウンロード",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "OpenAI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "Google Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar": {
+      "main": [
+        [
+          {
+            "node": "新URLに置換する",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LINE ローディング": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LINE 画像ダウンロード": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "新URLに置換する": {
+      "main": [
+        [
+          {
+            "node": "Line : Reply with token1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Tokyo",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "4ae3263d-6e5f-4406-a24e-ed162b1c1f88",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f60b5681435bb5199b26d0a9b469e686f61235ebec3beba276d1bdb14638a511"
+  },
+  "id": "R0N4NI1fcLoZwbB9",
+  "tags": []
+}
