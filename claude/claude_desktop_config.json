@@ -1,0 +1,37 @@
+{
+  "globalShortcut": "",
+  "mcpServers": {
+    "claude_code": {
+      "command": "/Users/mitsu/.volta/bin/claude",
+      "args": [
+        "mcp",
+        "serve"
+      ],
+      "env": {}
+    },
+    "memory": {
+      "command": "/Users/mitsu/.volta/bin/npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "/Users/mitsu/.claude/memory.json"
+      }
+    },
+    "filesystem": {
+      "command": "/Users/mitsu/.volta/bin/npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/mitsu/ghq/github.com/mitsuoka0423/home-server"
+      ]
+    },
+    "playwright": {
+      "command": "/Users/mitsu/.volta/bin/npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}

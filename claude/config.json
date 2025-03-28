@@ -1,0 +1,58 @@
+{
+	"darkMode": "dark",
+	"scale": 1,
+	"locale": "ja-JP",
+	"quickWindowPosition": {
+		"absolutePointInWorkspace": {
+			"x": 706,
+			"y": 418
+		},
+		"monitor": {
+			"accelerometerSupport": "unknown",
+			"bounds": {
+				"x": 0,
+				"y": 0,
+				"width": 2048,
+				"height": 1280
+			},
+			"colorDepth": 30,
+			"colorSpace": "{primaries:BT709, transfer:SRGB_HDR, matrix:RGB, range:FULL}",
+			"depthPerComponent": 10,
+			"detected": true,
+			"displayFrequency": 60.00239944458008,
+			"id": 1,
+			"internal": true,
+			"label": "内蔵ディスプレイ",
+			"maximumCursorSize": {
+				"width": 0,
+				"height": 0
+			},
+			"monochrome": false,
+			"nativeOrigin": {
+				"x": 0,
+				"y": 0
+			},
+			"rotation": 0,
+			"scaleFactor": 1,
+			"size": {
+				"width": 2048,
+				"height": 1280
+			},
+			"workArea": {
+				"x": 0,
+				"y": 25,
+				"width": 2017,
+				"height": 1255
+			},
+			"workAreaSize": {
+				"width": 2017,
+				"height": 1255
+			},
+			"touchSupport": "unknown"
+		},
+		"relativePointFromMonitor": {
+			"x": 706,
+			"y": 393
+		}
+	}
+}
